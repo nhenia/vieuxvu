@@ -1,0 +1,9 @@
+(globalThis["webpackChunk_canva_web"] = globalThis["webpackChunk_canva_web"] || []).push([[78933],{
+
+/***/ 166162:
+function(_, __, __webpack_require__) {__webpack_require__.n_x = __webpack_require__.n;const __web_req__ = __webpack_require__;__web_req__(905716);__web_req__(734120);globalThis._5f74ec40302898c5a55451c9fbd04240 = globalThis._5f74ec40302898c5a55451c9fbd04240 || {};(function(__c) {var emd=function(){return()=>dmd("div",{})},dmd=__webpack_require__(296713).jsx;var fmd=__webpack_require__(978109),gmd=fmd.memo,hmd=fmd.useMemo;var imd=__webpack_require__(186901),jmd=imd.EW,v7=imd.sH;var kmd=class{static G(a){__c.M(a,{QIb:jmd,currentFrame:v7.ref,fPa:v7.ref,bsb:v7.ref,O9a:v7.ref,lMa:v7.ref,OS:v7.ref,seeking:v7.ref,c_b:v7.ref})}get QIb(){return Math.max(0,this.O9a-this.bsb)}get Kb(){return this.fPa}set Kb(a){(this.fPa=a)&&!this.OS&&(this.OS=!0)}constructor(){this.currentFrame=(kmd.G(this),0);this.fPa=!1;this.lMa=this.O9a=this.bsb=0;this.c_b=this.OS=!1}},lmd=class{static G(a){__c.M(a,{og:v7.ref})}constructor(){this.og=(lmd.G(this),void 0)}},mmd=class{static G(a){__c.M(a,{selected:v7.ref,
+Uj:v7.ref,ba:v7.ref})}constructor(a){this.selected=(mmd.G(this),void 0);this.Uj=new kmd;this.selected=a}};var nmd=__c.QB()(({gg:a})=>{const b=new lmd;a=a.BT;const c=gmd(function({data:d,Ga:{Ie:e,Jb:f}}){d=hmd(()=>emd(),[d,e,f]);return dmd(d,{})});return{metadata:{type:"motion_graphic",name:"Motion Graphic"},iA:()=>new mmd(!1),C:__c.PB(c),exports:{configuration:b,BT:a}}});__c.mQc={Ud:__c.hUc,zk:nmd,Vd:__c.OUc};
+}).call(globalThis, globalThis._5f74ec40302898c5a55451c9fbd04240);}
+
+}])
+//# sourceMappingURL=sourcemaps/94d28774a814083d.js.map
