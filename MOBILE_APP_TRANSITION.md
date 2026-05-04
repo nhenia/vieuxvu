@@ -28,18 +28,39 @@ Since the requirement is **platform-agnostic**, I recommend using a cross-platfo
 - **React Native:** Ideal for a performant, "native-feel" app.
 - **Flutter:** Excellent for highly custom, pixel-perfect designs like this gothic theme.
 
-### Phase B: Frontend Scaffolding
+### Phase B: Data & Database (The Magic Library)
+We have successfully extracted the raw data from the site export and established a structured database.
+1. **Extraction:** Parsed the Canva JSON to retrieve 29 unique locations across 7 categories.
+2. **Database:** Created a SQLite database `red_as_death.db`.
+3. **Schema:** Implemented a `haunts` table using SQL:
+   ```sql
+   CREATE TABLE haunts (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     name TEXT NOT NULL,
+     category TEXT NOT NULL,
+     description TEXT
+   );
+   ```
+
+### Phase C: Frontend Scaffolding
 1. **Export Designs:** Use the Stitch output (HTML/CSS components) as a reference for styling.
-2. **Setup Theme Provider:** Implement a global theme (e.g., using Styled Components or Flutter Theme) using the hex codes and font families defined above.
-3. **Asset Migration:** Upload your custom images (from Canva) into the app's `assets` directory.
+2. **Setup Theme Provider:** Implement a global theme using the hex codes and font families defined above.
+3. **Asset Migration:** Upload custom images into the app's `assets` directory.
 
-### Phase C: Navigation
-Implement a **Stack** or **Tab** navigation system.
-- Use a **Bottom Navigation Bar** for quick switching between the Home and key categories.
-- Use **Stack Navigation** for moving from category lists to individual detail pages.
-
-### Phase D: Content Management
-For an "info app," consider using a headless CMS (like Contentful or Strapi) or a simple JSON configuration to manage the lists of bars, restaurants, and shops. This allows you to update the "Exile List" or "Midnight Market" without redeploying the app.
+### Phase D: Navigation & Logic
+Implement a **Stack** or **Tab** navigation system that queries the SQLite database to populate the lists dynamically.
 
 ---
-*Designs are currently hosted in the Stitch Project ID: 9706101377096851256*
+
+## 3. The "Magic Toy Box" Summary (ELI3)
+
+Imagine we're building a special **Magic Toy Box** for all our friends who like dark colors and cool stories! Here is how we make it:
+
+1.  **Pick the best blocks:** First, we need to pick the right Lego blocks (Framework) that work on every kind of phone.
+2.  **Paint it spooky:** We take our favorite red and black paint and make the toy box look just like our drawings (Design System). No round corners—everything stays sharp and cool!
+3.  **Add the stickers:** We take all the pretty pictures we made and stick them on the walls (Assets).
+4.  **The Magic Library:** We built a special library inside the toy box! Inside the library is a big book (Database) that remembers every single place—like the *Voodoo Lounge* and the *Vampire Café*. We used a special magic language called **SQL** to tell the book exactly where to put each name so we never lose them.
+5.  **Make the secret doors:** We add big buttons that act like secret doors (Navigation). When you push one, the toy box asks the Magic Library where to go, and then *ZAP!* you're in a new room!
+6.  **The Magic List:** If we find a new spooky place, we just tell the Magic Library, and it writes it down in its big book instantly!
+
+And then, *POOF!* Our Magic Toy Box is ready for everyone to play with on their phones!
